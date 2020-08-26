@@ -38,7 +38,7 @@
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
-						<applicationName>Hello-Application-2</applicationName>
+						<applicationName>${anypoint.applicationName}</applicationName>
 						<muleVersion>4.3.0</muleVersion>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
