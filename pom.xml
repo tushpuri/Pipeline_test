@@ -33,8 +33,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<username>tusharpuri002</username>
-						<password>TushP0101</password>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
