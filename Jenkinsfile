@@ -5,7 +5,7 @@ pipeline {
 		stage('Build Application') {
 	        	steps {
 				echo 'Build Appplication...' 
-	                	//bat 'mvn clean install'
+	                	bat 'mvn clean install'
 			}
 		}
 	        stage('Test') {
@@ -21,6 +21,7 @@ pipeline {
 		       steps {
 			       echo 'Deploying only because of code commit...'
 			       echo "Username is $ANYPOINT_CREDENTIALS_USR"
+			       bat "mvn package deploy -DmuleDeploy -Danypoint.environment=Sandbox -Danypoint.username=$ANYPOINT_CREDENTIALS_USR -Danypoint.password=$ANYPOINT_CREDENTIALS_PSW -Danypoint.workers=1 -Danypoint.workersType=MICRO -Danypoint.applicationName=Hello-Application-2 -Danypoint.muleVersion=4.3.0 -DobjectStoreV2=true'
 		       }    
 	       }  
 	}
