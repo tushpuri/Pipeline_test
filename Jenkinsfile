@@ -20,7 +20,7 @@ pipeline {
             		}
 		       steps {
 			       echo 'Deploying only because of code commit...'
-			       echo 'Username is "$ANYPOINT_CREDENTIALS_USR"'
+			       echo "Username is $ANYPOINT_CREDENTIALS_USR"
 		       }    
 	       }  
 	}
